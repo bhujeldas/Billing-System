@@ -1,0 +1,545 @@
+"use strict";
+
+var campaigns = [ {
+    priority: "30",
+    apps: [ "12aa3ffc-9930-e337-c876-5eabaf6b819d", "1390e7c4-7043-1138-d97e-2c818b605685", "13091aba-3201-0d9c-effd-96454452e523", "129acb44-2c8a-8314-fbc8-73d5b973a88f", "12bddf54-bbc2-cc26-38ed-ebc1601a8dcd" ],
+    exclude: [ "13d21c63-b5ec-5912-8397-c3a5ddb27a97" ],
+    excludePages: [],
+    postReg: [ "bookings" ],
+    name: "bookings",
+    guids: [ "6F7D9ECA-1E95-4721-AA79-03C427498C20", "CB47FBFA-4B99-4598-AECF-051BBA42031B", "9BC17E86-361F-4227-9807-060215BB14DC", "77BFBA0E-E1FC-4372-A8C3-065B2CDE7922", "D22425D8-BCC7-4190-929E-06753211DF4C", "61FA2600-F2B7-433C-9717-06A4B50D8ABE", "CF13B2BA-9664-430F-AE4C-06E06F269563", "DFE198CD-3474-454F-AA26-082DE7730632", "4E281E88-BFB7-4EFB-BA4F-098182021152", "A965E251-2436-4DC8-A60F-0A4E54FF0B28", "DE403448-BA81-4FF5-A1AE-0ABEA26EF9B4", "7A93D38E-61F4-43BC-B309-0C88BEC09E71", "EBE871DB-E913-47D8-B605-0CECBAEE0C8E", "417D833F-DAA5-4F13-BDD8-0E559F4BA015", "43AA6976-7FC1-485B-BEC1-0EB210CC7D3F", "C94BBB1A-42EC-4700-88AF-0F1E1198F02E", "B1B3473C-8124-4DE4-A074-0F650B1B3EE4", "5B90E6D6-5369-4D12-9638-104821070F6D", "F3F6776B-4231-422B-8FAD-12144FB302B3", "B9E6636D-A094-44B4-B154-12D8C6652084", "909BEF0C-0DD5-4EDF-B68A-147EB7541096", "E71BC144-00AB-42F2-BC8E-14D408D94F93", "E5861708-6797-4EA2-9944-153D810BFA05", "6D5433F6-012F-4090-BBBF-15CE944AD2B4", "F2F3C43C-E472-4B61-AD24-162AD6839DC1", "34B794C4-E133-441C-B97B-19AC8D904CAE", "FFBE9E27-9C58-495D-9845-1A14B7711320", "8100B4DB-1FB9-4AF2-AEAA-1B8B948D23BA", "6A7FFB10-F856-4888-8E86-1ECB9A7172FC", "73B45F2A-E9A3-4F6D-8B48-1F048F18CD84", "7D56B2FD-4784-427F-9995-1F61322FC202", "C910370D-DDD6-4F2B-B3E6-1FBC5FDFB899", "1833892F-9BA1-499D-89DA-1FE464C1FD1A", "4EBF55EA-7128-4B39-ACDB-203494CC056D", "27DED02F-A2ED-4130-A75B-213F9530CB5E", "58B2D210-6DF2-43F7-B8D4-214D513E6BA6", "70279701-B204-42AA-8740-21BAF4F9EEAA", "97D5D35E-D343-4D48-860F-22D22A8B6A6D", "00B5E9FD-936D-4AA0-989E-244F2957DE86", "44E504EC-9CBB-46F3-967C-249AD11E4B19", "6F416947-666C-4F1C-9796-27853C900578", "C25CE5CA-4B5B-4825-8F51-2A91B38B10EF", "D7A31CF5-F524-4A1F-8046-2ACF8A9036A6", "93E23498-A82A-4140-9CE1-2B64B87A2AFE", "537D6EC9-AD4F-4DC7-A5AB-2BA7A0139A63", "5AE7CDE5-2967-42E9-A426-2D99FC979059", "9DF18D71-F7DE-4CE2-9863-2E9B8DD52EFE", "354793FE-9096-4D98-B90C-304F2F6A3125", "AD4F4ABC-722F-4797-B1C8-34E10DF195AE", "10D1E4BE-3D8B-46C0-8705-34E6187B283C", "D7FCD21C-99FB-4540-BAF5-39004EB70882", "73A68B6E-46A3-47A3-96C0-3B8359F9898C", "A0200572-F075-4F56-A1AD-3BD5A39C2710", "0DF4CBBD-1A48-41BF-89F3-3C571BF92625", "A479EE3A-D964-4294-8AB3-3D6EB8DD4E75", "EA518D8C-41F8-4834-8A89-415A68ED44F1", "3688FB4C-B2D2-4206-92B4-4290937757DD", "717AE0EF-B9B4-44EB-9765-4412D2B6EC9F", "A36379C9-B270-40A0-8397-44683EB8A590", "E8B10E25-2646-4451-B599-448D8E7C22A8", "D0C007C1-A832-4F41-ADC2-451DC8C26201", "BCE06D9D-0496-4443-B9FB-460F5E33BFBA", "C284E3B0-26AA-4534-B727-4762F791EE7B", "E77530E7-08A9-485B-8EE6-477FBBB2D1C7", "AE7805F6-6CC8-45EA-8AAB-4BC0437D9308", "E49634F0-9B18-44CD-9760-4C57F4EDC0AE", "69B6F805-6321-4AE1-890B-4FAFEE8281A4", "0253521A-E172-45BC-A52F-50FBBD1601C7", "E7FBC016-EE6F-4115-B293-5142072D80DE", "351C4F14-94B6-4B6D-B936-51D1717D4367", "A36AAB1E-ABD6-46B0-A9D6-523B9472C65E", "DD841792-59AC-401B-8137-52E077051DAB", "2F15CE52-E3DF-468A-9186-54F6D976AF12", "B6F81837-5C8D-4566-A44D-55D6A3D88607", "D24FE62C-3CE1-42E1-97D5-564F7740AC37", "183D7435-00D4-4527-9BB9-5673FFF2F9D8", "1B103321-376E-4BE1-9439-575FC7476F6A", "72BBEBE2-7796-408F-B8D6-57E4562D1014", "8347DC29-207A-4AD2-A724-5807AEBEDBF2", "01E0CC05-CAF3-459C-8778-5A9D3B8E0357", "2C1E8BC9-51BD-4320-963C-5B234A2973C2", "B34D0FA2-71B5-478A-964F-5D1A8AA1A552", "8D4A0C15-BC9F-43C8-BF15-5F56B9C9C3FE", "A476573E-F4B4-4D3C-869A-5FAEE31A07FA", "8641EB47-7557-47B0-B959-610B78458661", "2395BB0C-13D6-4031-8AAC-619653A88854", "B173F375-CFA0-4C4F-845E-6201103C589D", "D638CEC8-381B-4B75-81DA-637E2D2EF58F", "E374AAA7-C317-4638-98C9-64C24AE2A993", "F4C7A639-A5B8-42D2-8B4F-67D888BB5F1F", "B05DCE8A-FCA3-443F-9BFD-6A6E06E14F23", "88BA3981-824A-41B1-8A5D-6A7969B0D717", "778027B5-12D1-4B20-9281-6E0AB553CC1B", "47E79BB1-D7DF-40DE-8377-6E885010BBD6", "9220D1C4-3AEC-415D-BCEF-6EBF81A5A6A5", "DA949148-0634-4088-A5E7-704FEB2EAC88", "827A8E64-20BE-4776-8BCD-72BB77F885B3", "50DF1BEE-30FD-47C9-BD48-75E210D2FC06", "4FB3B17C-90AD-4ACF-AA0B-767D41221961", "1769C192-8D0A-4906-9B6C-78D5DA885CC3", "856DB415-FE35-46D4-83F5-7AEA239756C6", "E4222BCE-A676-47C8-AB04-7BCA04096ABD", "9A2BDCBC-E002-43ED-9516-7C190ECF2A33", "57B7EE89-C4EB-4EFF-909A-7C2ABFC2DC4C", "09C2ECB6-9AC5-435E-9970-7CCA18CD9C7D", "262B91FD-3AE7-4CF7-A82B-7EDF3BD8A89E", "86C3E9F5-79BD-49D6-AE8A-80195778A7F8", "F4F6926A-D9CD-42A0-A76C-818ABB872674", "60301F6B-2239-44BA-8724-854D282121AC", "A2EFECA9-3DBE-46E5-80FA-8551F62588D1", "9E897ECA-F1C8-4258-A8D6-861BF3E2FF55", "C4B54E4F-CDDE-433F-AF09-87B3760ACF27", "E485DA09-67F6-4D05-9A42-8859FAD34213", "8CDDE989-D7EF-4154-AEE1-88BDC5F9CB66", "756BD8E2-AD3E-4DEA-95DE-88D95CC143F6", "F37DF911-9C47-4746-975C-8B81BD3186A3", "648AE4F3-0BC8-46C6-BECC-8BBF3CCC2AB3", "AC2773AC-65A1-4400-98E3-8CD5BABE0593", "1BD0DA85-8D04-42AB-8BB5-8CEC731B8D21", "93E1E047-8653-4ACD-B842-8D0C67CF9A21", "6C819F4D-F6EC-4A01-9596-8D500D5F13D7", "1708173D-9676-4D22-B9D7-8E757B413A1E", "6CF58EBC-EEB2-4CE7-B33C-91E1F3D9A3F6", "86DB8D99-C3A3-4052-AF9E-97558224559E", "7F22CB04-BBCB-45DB-9E26-999E97CEBD36", "D90EBAC5-B4F2-4D2A-A357-99FA63D8931F", "E66BE220-7EE1-43E5-8BA1-9B16DECA31B6", "B2284190-EF62-4EBE-AD93-9EDBFDFABDD1", "02D5381E-5A64-42C3-AC55-A10271B8093A", "FD841DF2-D88B-4474-85A8-A1B8626E7246", "96D1A157-A7DE-4797-AB32-A1FBBFB0513D", "35FE0615-0149-40B3-8874-A30D796461C8", "3EAFB240-6118-48BD-AEB2-A351B54536BD", "B16A7702-E527-4C4D-893C-A4E45CF69B89", "5C75947B-FF68-439C-9CA2-A5F29B7EBCF6", "19A3AC3F-E074-42A6-B237-A6D4B653B51F", "2C8EFE45-404F-4572-9184-A7D50855073C", "1C057899-E7D5-4BC5-AC1F-AA1914EDFD7B", "0FA56249-9468-402C-846A-AAF69E3AF84B", "5522B5E5-1B0B-4CBE-9617-ADF25E120B69", "82DA9615-92A3-46F1-BE2A-AE73AE4A5DCB", "A9F16560-9E6F-4176-8CEB-AFD132747694", "A7ADA820-CC6E-4510-B7AB-B02F5BB91DB9", "3E970261-DA27-4E1C-A723-B071BA07B813", "083883E3-DA91-4940-9B62-B0B21B21DC3B", "53FD7678-6B78-4DAC-9257-B1555C1E7CD6", "6BE6AEAD-B9B3-4D5D-B53E-B1BA694EE75C", "DAE38D2D-362D-4538-A9D2-B374EB1DBE29", "AC67F811-F0EB-49AC-8E38-B66A9637A16E", "50484923-180E-46B8-BBE5-B729D2DC4377", "574FDD56-7F7F-4D9F-B80E-B911F9D24EB2", "9547845F-BD4D-4231-9D91-B92A13A74E81", "84CEABBD-EA02-4379-B932-B9E1ACA53765", "9D644A7A-9D16-4644-A146-BA190AE706A0", "A597BA83-86F2-4336-A70F-BB3DB0820813", "AA7F13E8-BA6E-45A4-AF9B-BC455E0BD67B", "031D7F34-A771-4719-B645-C1C66AEE35F8", "D7712AF2-EE54-4BC9-8491-C22DEC6DB9AB", "DA5A58FE-BD48-4A42-8560-C641C9C57E08", "BEAE96F4-D665-4B6C-A9A6-C721651E2DB9", "A7326F23-CA03-4794-ACF4-C73D9E54B99F", "70BEE3EF-455E-4FBB-B34A-C74B417B4EDF", "EDEEF628-D72A-423F-BF56-C776F477B2A2", "DA0A7CFA-6166-4FE5-AD96-C95725124E7B", "3C4ECB8D-4042-4565-B07F-C9643865B0BB", "C5857B1F-6900-4B8C-8618-CA4F8A5705F1", "B060454F-D9FA-4229-AD1C-CB0B69349F32", "E98F61CE-401F-4532-85A8-CC5E4024FF37", "FA806C42-3A9E-406B-899C-CEEF17040461", "4E117FF1-80B8-4872-9E32-D0B070134225", "FC86080D-EEE9-4157-B4A0-D0CE6E27365E", "3AA21656-64C6-4DF8-8BAF-D0E9ABCA71E2", "B0CA63A8-B179-4686-B3C2-D474A86682A2", "F4D3913A-9413-416B-BD41-D586D67F0552", "D53D281A-9763-4C10-8143-D7536E52D176", "090FDFE2-63F7-4AED-B281-D78624FE305D", "EB6012C6-1B70-45C2-87A3-D789B3DF1CD7", "BFA7382F-4627-4F5D-BF23-D7FAB4B8D6E8", "C8BCC939-022D-407D-A438-D8DBFF264C8A", "90B4273C-F2E3-41D4-82DB-DB2DA3F03A3A", "1A3290ED-D7DD-4B83-8231-DC71FD435E9C", "8227570C-FAF7-42E6-A86E-DD22B2C6D7C0", "A230CE1E-B6A4-47B1-A382-DE342261FE72", "E4C9E84D-A4C4-4CD2-A724-E01DA9B26B02", "1373D27F-DDAD-4DF1-84B1-E1CCF9B2A519", "DC03C894-E962-443E-8510-E21C4AB176DA", "B4BED2C2-1DDE-46F7-8EAA-E331650F5D03", "1F6F56CB-8861-4F0A-90E7-E49F16A20129", "582986D1-D8BD-46A0-B6B5-E55B93582DB3", "D9FCAD8C-BB19-462C-90B5-E6280D06ADB8", "47BBF08A-13C7-42FB-89D9-E7AAEC63F51B", "0799B1D1-C329-42F2-83BE-EB68AD7785A0", "07A67631-FCA5-411A-8B01-EB7594247C0E", "4BC79121-37DE-4A7E-BF0A-EC75EC206E7A", "00BF5193-063F-4717-8595-EC7F611365D2", "6FDD7D54-7F19-4A04-9309-EF83EA6A76F5", "4931E5A0-477E-4F55-8B9B-F31EC2E074F7", "D0B411FE-9F73-49A0-8FD2-F52690442154", "AB4A6724-AECC-4196-898C-F690AA988A21", "07E1BC11-30C8-4A5D-81F1-FA4419F253E1", "9C93C40F-2D13-40F7-BCBC-FACAE2C48534", "B1A7A226-FA24-4F76-ACB5-FE060644C8EB", "956E72DB-D977-4AE3-9FBE-FFC216988340" ]
+}, {
+    priority: "40",
+    apps: [ "13e8d036-5516-6104-b456-c8466db39542", "12D32B82-BCAD-1CA8-5E8B-B600B839DB40", "14583ff5-e781-063a-3bc4-6b79fb966992" ],
+    exclude: [ "13c1402c-27f2-d4ab-7463-ee7c89e07578" ],
+    excludePages: [],
+    postReg: [ "restaurants" ],
+    name: "restaurants",
+    guids: [ "ffbe9e27-9c58-495d-9845-1a14b7711320", "cc1f2d0c-3977-4dbc-a65b-61f468a711e0", "562833d2-5d49-41e6-957c-cf4f514c56ae", "b8133cf9-8f41-436e-b65e-89aa8d2ec326", "5335b9fe-2951-4881-b91f-3d2ffa87742b", "2c52bc7a-cba2-4eec-ad50-489d73aacb97", "5c073268-da7c-4576-8691-7fc8022542f8", "91be7d41-a638-49df-8f3d-14c6d8b62d7e", "01ac5af1-bd5f-40f3-8498-88edb81b6e39", "73329fbe-2165-4d20-9773-d20fb462b224", "8efe0c47-4062-43bd-9bce-a14d6611147a", "7776cbc7-a889-470a-b106-0629717bf9ac", "78ce4e6b-ec5e-4615-904a-d6e6519d8923", "733ce9cc-b0e8-4784-82be-3d8baf44addf", "28ea097b-08b9-4281-b463-6a26a02a8c87", "97afe62d-5942-4e92-a4b6-a5bdff49f36d", "a5916299-6418-4014-ab83-3ef65bb2b411", "ee4a7645-3581-44a1-86f7-2863c42d6cae", "7583c7e3-d7ec-4881-9cbd-370d4b15877c", "9761297c-d4d4-4006-bfb8-47bbb67ace4b", "ace5f50c-aa9c-43ab-af1b-72d63e741e1b", "934b6522-4b84-408d-a3cb-44a04b3aad7e", "59e79080-37bc-44b2-9f46-21295a1ab926", "ed7b699b-8858-419b-9874-ec86d1c1e8f2", "3331a5c3-2f74-437a-b123-29ad69425de7", "b693af67-1a98-4e9e-9da2-97a546560fc3", "a7863f56-4c27-4235-9deb-268617a1a29c", "a33a52cd-f84a-4e60-9c21-a60866228029", "be1d1280-e01d-479c-89ba-fc2d2e0eb699", "37c64f5f-7fa4-4dc1-9b11-c7392411347e", "24ef8660-7354-4687-8028-f6c6514d4a70", "3ba739da-9595-4868-8a75-8a008f8838cb", "7ecedca4-1a69-4549-9416-e7533c770f44", "c7102299-a8be-49e0-a3cd-50617bfc1d73", "08371c54-819c-4847-b1a4-c5ef41771e67", "f52fc1cd-22a1-499f-981c-a6763ce6f5a3", "5a827d98-c27d-4d02-93f9-22d985d274f0", "9c8de97d-12fc-4c93-a032-1acf042db000", "ed9bc57d-3c17-4825-a00c-13110154b3da", "5d9a3c2f-df93-4155-88d2-290fdba6fcdb", "bd9bc24c-2243-485b-9ca6-955b0407a8b5", "faa85d37-13c7-4450-bac3-3e8f0b2f7cba", "95aa8ec4-99d3-49e8-8b91-52485cea9f26", "71d5abee-7ea7-4a93-908e-8b29cab29fba", "b1e63297-df9d-4d03-b8ce-d14aa590c498", "70f82531-3e45-4706-b4ec-c89f3b709d7b", "76d51aca-5e71-4dff-9d49-410f92d72170", "1cfec249-5433-4a0b-ab62-1bae5e774b36", "dc3a6684-cfa4-4bba-82db-57237ad7f1f3", "a0a95a19-7efc-47d8-9933-4319ae4f0744", "fcb49c42-ae96-4aa9-9a8e-c62e5770b9db", "977306c0-04ec-4f82-ae3e-bdd0a3932dd8", "9d57c08e-6097-44ca-be73-94b043312a37", "fe73dd7c-ed8e-448a-b38f-eae198e0c0df", "131c1b1d-229e-743d-244e-a2027980ac1f", "cf1e00c5-faec-424b-b2b5-14e000785af3", "c7980492-8e8c-4f85-a2d3-d47629ec7ed7", "8bde801e-d343-4760-af25-fbf03478d976", "65138497-e0de-416f-8249-f6ec55ee3a7f", "ed1bb597-d5f6-4cfa-9ee9-6998d875d846", "9b655241-e4a3-4687-bf85-36d1ede44f56", "7460f48f-f40b-48eb-b31c-97becedd4ad5", "582a655b-7e4a-47f3-910e-b2333010fcfe", "1332993a-ca8c-4227-9a7d-4a6275bfc90a", "d82b9df4-83ee-4b96-bb34-7613840996f2", "cdc002d0-8156-4e34-9f33-c928e6b45a19", "fcc24784-23a3-4660-845d-d343157f973b", "25cf8041-0e6c-4769-908e-3bc93becf183", "c72d8f26-b03b-44b1-a158-55397777b27d", "131c1b2b-9a38-40c7-244e-a2027980ac1f", "83a1bc58-8d4b-4fe6-85d1-233ce570edcf", "b91c7132-6e69-4a33-a066-a435e7c58f58", "84e756b1-a496-49b4-9c31-ad6234a55e1a", "929b0595-c172-4268-be9c-5cbadbca33b0", "cdfed7d0-d897-4cbc-af91-c3de15961b65", "e29cab5e-2f18-4dbb-baee-0c2fbcea4805", "a6b04bea-99a2-41ed-b38a-979d6c20993c", "e3e78472-fd13-4003-8820-87915459b6f8", "674d54c1-06e2-473b-bf80-f8319a73a8fc", "09f96a66-04e6-47e3-b995-68a865428451", "bbd73c72-8e9b-425b-91b6-fe40f33435c7", "9c38189c-df84-4718-85f6-72bf049504dc", "cd346e55-c19e-44b7-8610-fbef14f08f30", "6cd0ac05-53a6-4def-bd46-35377758d33a", "ef853e6e-c3d1-41d0-9cae-739437ede9f2", "b4137c0a-c5d0-45a9-971d-01459644501c", "ef18201b-fa6c-4da3-97e6-367ebb82fbea", "1859dbd2-b8ba-4b8c-94eb-c971ab95f93c", "5aac6429-5cf9-4288-81c8-8e8016859492", "453ea83d-1ed7-4a7e-a01f-85cdc12e7336", "5e82f37d-31d3-42ab-aa7f-ed3e477ab8ee", "ad5a4d00-87d0-49ad-b56e-ce7e60a2f87e", "d1b1cceb-3025-434a-821b-6a23d6480373", "a4acddbd-3e4a-4389-8ddb-0bb3dd5ea463", "cb3c1349-9959-4492-8b9c-dbea39402d4c", "62fb6d87-c27a-429a-accd-b4ba334eba22", "3ac49f31-838b-4b30-bbd7-c0bbf0d9c3ca", "c519cab0-afa2-4b3f-8216-d79a3847a433", "0bd41500-5e30-4362-b27a-bafacfefc2de", "f0cd538d-a7db-457e-aba0-d19024d8175d", "aa2e9c1e-fd25-42cd-b411-a0bedf23d045", "c40b4165-8af4-4fff-9022-bc1bfb71e682", "659592a6-0e04-48fb-9fec-3c75d9e6f899", "a5dd6d30-0859-46d6-b7db-53758ec89be6", "0343dad5-7a1f-48a8-a0c3-bf0b1f4fb8a8", "4e074305-8d24-48fe-a2f0-fa1062c67c37", "bc4674b9-9a73-4d46-9f2f-189ce2c61b77", "6d622264-78c1-4f07-8f05-d423bf8a38d0", "7bb8af90-849c-464b-be48-b9ed347d5817", "26350aae-41a6-44d9-ada4-15f136e75474", "8ae879f2-6853-4c66-b8db-197d7e8a3237", "b78013d1-4561-4e88-b200-3b17eaa9b823", "23cd536d-10a4-4270-b777-5da3665838ad", "50484923-180e-46b8-bbe5-b729d2dc4377", "3250cd1a-45c4-4337-a42c-3e8f7cdf8bc7", "d7c13d39-fee4-4517-8a77-51625af90d56", "b3435a41-bf24-42de-8907-3be3e401a392", "32364d22-0511-400a-9477-64949e00bce8", "10038698-9a40-4521-86ae-c3a5b545881f", "3ad0b5d3-42b7-4477-a325-fe02e2ba5576", "9f35c4a3-48dd-41dc-a283-7e1049fe29a4", "48d6eefc-10c1-409a-89a9-afdc89477b09", "1bd3fb0d-e488-4e93-b232-0831b6f3714e", "3c1caf47-c039-403b-ae97-eef2b5d07b4c", "abce650f-ca4b-4098-b8b7-7a9bc76dacf1", "0a157cff-7360-4729-9d14-27764d729c5d", "1321a7ec-c12f-c015-0d11-8d8b023f9a04", "341598fd-e6cd-497d-9b0d-a029c189894f", "0dba0223-4957-4dee-9eb7-2a34896453df", "1311051b-2240-9b77-6835-979b12013c86", "3edbf6f7-22ad-4bc6-bccb-a0475121a9c1", "c73c11b5-60dc-4665-ba8f-250c3225ada6", "ff8b540e-26ff-4668-b027-a3afde950fe5", "2f2d98bf-288c-4a0a-b784-f0883fb6c890", "ae761ba7-31fe-4a92-a467-78f8d23ec6f7", "69e752ad-24d6-4c6a-b7d6-2753ae764566", "98ac68c9-8c17-4c16-abbf-b04888faf100", "6d1fc75a-0445-4484-bd74-aa8365d4aaa8", "9a22423c-7af1-411c-8815-af323954f147", "35fe0615-0149-40b3-8874-a30d796461c8", "8e50b518-1326-45f3-b8eb-703f24deb99d", "90bdb689-94df-459d-83bc-df9d8a3f9dc8", "eb6012c6-1b70-45c2-87a3-d789b3df1cd7", "95b35222-b151-4ba6-b259-87d270dd14f1", "6b0b332e-ba1b-417b-85a0-dbae0be49535", "be4b48d8-c1b6-4a02-bb02-2d34ec7e0313", "9829156d-cfd3-4d0f-9d02-f9d2832a511e", "93582a1f-4bd2-4fa2-9f3a-182ef5de5f39", "cf13b2ba-9664-430f-ae4c-06e06f269563", "14c0a8f6-cb48-4fac-b909-6e99b4424791", "d58e0c45-1861-47d9-ad5b-c35e410d9ec4", "131c1b40-811a-fdd5-f807-4d5230aaedef", "d50e6308-5991-4e73-b775-f42431cd94d0", "9725fca1-97aa-4d9f-9dbb-65d63805ac61", "80ee4b1b-5308-4da9-9b5b-2cc894539910", "e9c9221d-f83d-40a9-abb3-31f38b11a890" ]
+} ];
+
+"use strict";
+
+var Adoric = window["Adoric"] || function() {
+    var xmlhttp;
+    var pagesMap = {
+        homePage: "^wix.com[/]?$",
+        templatesPage: "^wix.com/website/templates",
+        MA_Dashboard: "^wix.com/my-account/sites/.+",
+        MA_mySites: "^wix.com/my-account/sites$",
+        MA_mySites_2: "^wix.com/my-account/sites-this_is_MySitesFromTopLogoOnSiteDashboard$",
+        templatesViewer: "^wix.com/website-template/view",
+        LP1: "^wix.com/eteamhtml/templates-us$",
+        LP10: "^wix.com/buildyourwebsite5/stunning_sam_no",
+        LPHiker: "^wix.com/getasite/beautiful-website$",
+        LPHiker_1: "^wix.com/getyoursite/hiker-us$",
+        LPHiker_2: "^wix.com/html5en/hiker-blog$",
+        LPHiker_3: "^wix.com/html5en/hiker-builder$",
+        LPHiker_4: "^wix.com/startyoursite/hiker-en$",
+        LPHiker_5: "^wix.com/html5en/hiker-design$",
+        LPHiker_6: "^wix.com/html5us/hiker-create$",
+        LPHiker_7: "^wix.com/getasite/click-here$",
+        LPHiker_8: "^wix.com/htmlsites/beautiful-website$",
+        LPHiker_9: "^wix.com/stunninglybeautiful/fb-acquisition-a$",
+        LPTest: "^wix.com/arikwa/copy-of-stunning_sam$"
+    };
+    var adoricLightBoxEvents = {
+        "lightbox:before:show": "show",
+        "lightbox:before:close": "close",
+        "lightbox:before:click": "click",
+        "version:selected": "versionSelected"
+    };
+    var biMap = {
+        close: {
+            0: {
+                type: "closed by click link redirect",
+                evid: 666
+            },
+            1: {
+                type: "closed [by submit form]",
+                evid: 666
+            },
+            2: {
+                type: "closed [by autoclose timer]",
+                evid: 37
+            },
+            4: {
+                type: "closed by user",
+                evid: 36
+            }
+        },
+        show: {
+            0: {
+                type: "show default",
+                evid: 35
+            },
+            1: {
+                type: "show [by timer]",
+                evid: 35
+            },
+            4: {
+                type: "show by mouseout",
+                evid: 35
+            }
+        },
+        click: {
+            0: {
+                type: "template click",
+                evid: 38
+            },
+            1: {
+                type: "form click",
+                evid: 666
+            }
+        },
+        versionSelected: {
+            0: {
+                type: "version selected",
+                evid: 40
+            }
+        }
+    };
+    var userSiteStatus = {
+        first_publish: "publishedSite",
+        first_premium_site_id: "premium",
+        first_saved_site_date: "savedSite",
+        first_dashboard_visit_date: "secondTimeOnMA"
+    };
+    var userAdditionalInfo = {
+        language: "language",
+        post_reg_category: "postRegCateg",
+        post_reg_sub_category: "postRegSubCateg",
+        installed_apps: "installedApps",
+        saved_templates: "savedTemplates",
+        gallery_added: "galleryAdded",
+        country_code: "GEO",
+        premium_purchase: "premiumPurchase",
+        premium_cycle_ids: "premiumCycleIDS"
+    };
+    var userDataRaw = null;
+    function biTrigger(reportSrc) {
+        var BIDomain = window.location.href.indexOf("local") !== -1 || window.location.href.indexOf("wixpress") !== -1 ? window.location.protocol + "//frog.wixpress.com/" : window.location.protocol + "//frog.wix.com/";
+        var img = new Image();
+        img.src = BIDomain + reportSrc;
+    }
+    function isNotValidMA(path, pageName) {
+        var patt = new RegExp("my-account/sites/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/$");
+        return pageName === "MA_Dashboard" && !patt.test(path);
+    }
+    function query(url) {
+        url = url.substr(url.indexOf("?") + 1, url.length);
+        var urlParam = url.split("&");
+        var query = {};
+        for (var i = 0; i < urlParam.length; i++) {
+            var item = urlParam[i].split("=");
+            var value = item[1];
+            if (item[0] === "automation") {
+                value = Boolean(value);
+            }
+            query[item[0]] = value;
+        }
+        return query;
+    }
+    function getCookieValue(param) {
+        var value;
+        var info = document.cookie.split("; ");
+        info.forEach(function(index) {
+            var arr = index.split("=");
+            if (arr[0] === param) {
+                value = arr[1];
+            }
+        });
+        return value;
+    }
+    function getLocalStorageValue(param) {
+        return localStorage.getItem(param);
+    }
+    function makeXMLHttpRequest(method, path, onSucess, onError, async) {
+        if (onSucess === void 0) {
+            onSucess = function(xmlhttp) {
+                xmlhttp = null;
+            };
+        }
+        if (onError === void 0) {
+            onError = function(xmlhttp) {
+                xmlhttp = null;
+            };
+        }
+        if (async === void 0) {
+            async = true;
+        }
+        xmlhttp = new XMLHttpRequest();
+        var responseStatus = 0;
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                onSucess(xmlhttp);
+            } else if (xmlhttp.readyState === 4 && [ "404", "408", "500" ].indexOf(xmlhttp.status.toString()) !== -1) {
+                onError(responseStatus);
+            }
+        };
+        xmlhttp.open(method, path, true);
+        xmlhttp.withCredentials = true;
+        xmlhttp.send();
+    }
+    function getAndRemoveLocale(url) {
+        var matches = url.match(/^(([^.]{2,3})\.)?(wix\.com.*)/);
+        var locale = matches[2] ? matches[2] : "";
+        locale = locale.replace("www", "").toUpperCase();
+        return {
+            locale: locale,
+            cleanUrl: matches[3]
+        };
+    }
+    function findPageNameFromUrl(url) {
+        if (Adoric.cashedPageName) {
+            return Adoric.cashedPageName;
+        }
+        var locale, cleanUrl, ret, pageName;
+        url = url.substr(url.indexOf("//") + 2, url.length);
+        ret = getAndRemoveLocale(url);
+        locale = ret.locale;
+        cleanUrl = ret.cleanUrl;
+        for (var linkName in pagesMap) {
+            if (cleanUrl.match(pagesMap[linkName])) {
+                pageName = linkName;
+            }
+        }
+        pageName = pageName ? pageName.replace(/_\d$/, "") + locale : "";
+        Adoric.cashedPageName = pageName;
+        return pageName;
+    }
+    function getAdoricLabelCounter() {
+        var counter = 0;
+        if (localStorage.getItem("adoricLabelCalledByPageCounter")) {
+            counter = parseInt(localStorage.getItem("adoricLabelCalledByPageCounter"), 10) + 1;
+        }
+        localStorage.setItem("adoricLabelCalledByPageCounter", counter.toString());
+        return localStorage.getItem("adoricLabelCalledByPageCounter");
+    }
+    function adoricLabelCalledByPage(petriValue) {
+        var isVisible = petriValue === "visible";
+        var url = window.location.href.indexOf("local") !== -1 || window.location.href.indexOf("wixpress") !== -1 ? "http://www.wix.com" : window.location.href;
+        var pageName = findPageNameFromUrl(url);
+        var adoricCounter = getAdoricLabelCounter();
+        Adoric.biTrigger("adoric?src=2&evid=4&is_visible=" + isVisible + "&event_counter=" + adoricCounter + "&page_name=" + pageName);
+    }
+    function loadAdoricScript(petriValue, onLoadSuccess, params, pageName) {
+        var adoric = document.createElement("script");
+        adoric.src = "https://adoric.com/adoric.js?key=7d2e5d7f21df290e88ffd343d418dc25&adoricDebugMode=true";
+        adoric.setAttribute("type", "text/javascript");
+        adoric.setAttribute("class", "__ADORIC__");
+        adoric.setAttribute("id", "__ADORIC__SCRIPT__");
+        adoric.setAttribute("async", "true");
+        adoric.onload = function() {
+            onLoadSuccess(petriValue, params, pageName);
+        };
+        adoric.onerror = function() {
+            return biTrigger("adoric?src=2&evid=42&is_visible=" + (petriValue === "visible"));
+        };
+        document.body.appendChild(adoric);
+    }
+    function getLocaleFormat(langCode) {
+        return langCode.length <= 2 ? langCode.toUpperCase() : langCode.substr(0, langCode.indexOf("-")).toUpperCase();
+    }
+    function getPageUrlToCheckIfMA(path) {
+        path = path ? path : window.location.pathname;
+        var hasSlash = path.slice(-1) === "/";
+        return path + (hasSlash ? "" : "/");
+    }
+    function getPetriExperiments(pageName) {
+        makeXMLHttpRequest("GET", "/_api/wix-laboratory-server/laboratory/conductExperiment?key=" + pageName + "&fallback=donothing", function(xmlhttp) {
+            var petriValue = xmlhttp.responseText;
+            if (isNotValidMA(getPageUrlToCheckIfMA(), pageName)) {
+                return;
+            }
+            if ([ "donothing" ].indexOf(petriValue) === -1) {
+                getAndSendUserProfile(petriValue, pageName);
+            }
+        }, function(status) {
+            var FAKE_GUID = "A1111111-11AA-11AA-A111-1AA11AAA1111";
+            biTrigger("/trg?src=2&evid=10&cat=1&sev=30&iss=1&errc=11111&ver=1&did=" + FAKE_GUID + "&errn=Error_Getting_VIsibility_From_Petri&dsc=Error getting visibility experiment from petri");
+        }, true);
+    }
+    function isTemplateViewer(adoricInterface, url) {
+        if (url.indexOf("/view/") > -1 && window["templateEditUrl"]) {
+            adoricInterface.trigger(this, "setDynamicLink", {
+                ident_url_any_text: window["templateEditUrl"]
+            });
+        }
+    }
+    function getUserId() {
+        var info = document.cookie.split("; ");
+        var userId = null;
+        info.forEach(function(index) {
+            var arr = index.split("=");
+            if (arr[0] === "_wixUIDX") {
+                userId = arr[1].split("|")[1];
+                return false;
+            }
+        });
+        return userId;
+    }
+    function isUserRegistered() {
+        var isRegistered;
+        var userId = getUserId();
+        if (!userId) {
+            isRegistered = false;
+        } else {
+            isRegistered = !(userId === "null-user-id");
+        }
+        return isRegistered;
+    }
+    function mergeObjects(base, add) {
+        for (var prop in add) {
+            if (add.hasOwnProperty(prop)) {
+                base[prop] = add[prop];
+            }
+        }
+        return base;
+    }
+    function cleanAdoricParams(params) {
+        var defaultParams = {
+            publishedSite: false,
+            premium: false,
+            savedSite: false,
+            registered: false,
+            language: "ZZ",
+            GEO: "ZZ"
+        };
+        return mergeObjects(defaultParams, params);
+    }
+    function checkIfGUIDExistInDataCollection(guidCollection, dataCollection) {
+        guidCollection = guidCollection.map(function(singleGUID) {
+            return singleGUID.toLowerCase();
+        });
+        dataCollection = dataCollection.map(function(singleGUID) {
+            return singleGUID.toLowerCase();
+        });
+        var doesExist = false;
+        for (var i = 0; i < guidCollection.length; i++) {
+            if (!doesExist && dataCollection.indexOf(guidCollection[i]) !== -1) {
+                doesExist = true;
+            }
+        }
+        return doesExist;
+    }
+    function campaignManager(params, adoricInterface, campaignData) {
+        var apps = campaignData.apps;
+        var postReg = campaignData.postReg;
+        var exclude = campaignData.exclude;
+        var excludePages = campaignData.excludePages;
+        var guids = campaignData.guids;
+        var campaignName = campaignData.name;
+        if (excludePages.indexOf(Adoric.cashedPageName) === -1) {
+            if (params.installedApps && checkIfGUIDExistInDataCollection(params.installedApps, exclude)) {
+                return params;
+            }
+            var canTriggerCampagin = false;
+            if (params.postRegCateg && postReg.indexOf(params.postRegCateg) !== -1) {
+                canTriggerCampagin = true;
+            }
+            if (params.postRegSubCateg && postReg.indexOf(params.postRegSubCateg) !== -1) {
+                canTriggerCampagin = true;
+            }
+            if (params.installedApps && checkIfGUIDExistInDataCollection(params.installedApps, apps)) {
+                canTriggerCampagin = true;
+            }
+            if (params.savedTemplates && checkIfGUIDExistInDataCollection(params.savedTemplates, guids)) {
+                canTriggerCampagin = true;
+            }
+            if (canTriggerCampagin) {
+                params[campaignName] = canTriggerCampagin;
+            }
+            return params;
+        } else {
+            return params;
+        }
+    }
+    function sortCampaignPriority(campaigns) {
+        return campaigns.sort(function(a, b) {
+            return parseFloat(a["priority"]) - parseFloat(b["priority"]);
+        });
+    }
+    function userMeetsWithCampaingConditions(params, adoricInterface, campaigns) {
+        var updatedParams;
+        for (var i = 0; i < campaigns.length; i++) {
+            updatedParams = campaignManager(params, adoricInterface, campaigns[i]);
+            if (params[campaigns[i].name]) {
+                break;
+            }
+        }
+        return updatedParams;
+    }
+    function checkIfPremiumAccountIsValid(userPremiumIDS) {
+        var excludePremiumAccount = [ 6, 7, 5 ];
+        for (var i = 0; i < userPremiumIDS.length; i++) {
+            if (excludePremiumAccount.indexOf(userPremiumIDS[i]) !== -1) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function triggerCampagin(params, adoricInterface) {
+        var campaigns = sortCampaignPriority(window["campaigns"]);
+        params = userMeetsWithCampaingConditions(params, adoricInterface, campaigns);
+        adoricInterface.trigger(this, "userProfile", params);
+    }
+    function adoricManager(adoricInterface, params, petriValue, pageName) {
+        params["registered"] = isUserRegistered();
+        if (params["language"]) {
+            params["language"] = getLocaleFormat(params["language"]);
+        }
+        params = cleanAdoricParams(params);
+        if (window["campaigns"].length !== 0) {
+            triggerCampagin(params, adoricInterface);
+        } else {
+            adoricInterface.trigger(this, "userProfile", params);
+        }
+    }
+    function initUserDetailsAtAdoric(data, petriValue, pageName) {
+        var userData = data.payload && data.payload.fields;
+        var params = {};
+        if (userData) {
+            userDataRaw = {};
+            for (var i = 0; i < userData.length; i++) {
+                var user = userData[i];
+                if (userSiteStatus[user.name]) {
+                    params[userSiteStatus[user.name]] = !!user.value;
+                }
+                if (userAdditionalInfo[user.name]) {
+                    params[userAdditionalInfo[user.name]] = user.value;
+                }
+                userDataRaw[user.name] = user.value;
+            }
+        }
+        if (isUserMonthlyPremium(userDataRaw)) {
+            params["monthlyPremium"] = true;
+        }
+        if (isUserColor(userDataRaw)) {
+            params["userColor"] = true;
+        }
+        if (isNotValidMA(getPageUrlToCheckIfMA(), pageName)) {
+            if (params["premium"]) {
+                if (typeof params["premiumCycleIDS"] !== "undefined" && !checkIfPremiumAccountIsValid(params["premiumCycleIDS"])) {
+                    return;
+                }
+            } else {
+                petriValue = "visible";
+            }
+        }
+        adoricLabelCalledByPage(petriValue);
+        loadAdoricScript(petriValue, ready, params, pageName);
+    }
+    function isUserMonthlyPremium(data) {
+        var MONTHLY_PREMIUM_CYCLE_ID = 3;
+        if (data === null) {
+            return false;
+        }
+        var result = false;
+        var cycleIds = data.premium_cycle_ids;
+        if (cycleIds.length > 0) {
+            var nonMonthlyCycleIds = cycleIds.filter(function(cycleId) {
+                return cycleId !== MONTHLY_PREMIUM_CYCLE_ID;
+            });
+            result = nonMonthlyCycleIds.length === 0;
+        }
+        return result;
+    }
+    function isUserColor(data) {
+        var COLORED_VALUES = [ "MSO365", "REGRU", "GOOGLE_DOMAIN" ];
+        if (data === null) {
+            return false;
+        }
+        return COLORED_VALUES.indexOf(data.user_color) >= 0;
+    }
+    function getAndSendUserProfile(petriValue, pageName) {
+        makeXMLHttpRequest("GET", "/_api/wix-bi-profile-server/userprofile?fields=first_publish,first_premium_site_id,first_saved_site_date,first_dashboard_view_date,language,saved_templates,installed_apps,post_reg_category,post_reg_sub_category,premium_cycle_ids,gallery_added,country_code,premium_purchase,one_app,last_publish_blog_post,reply_to_contact,user_color&accept=json", function(xmlhttp) {
+            initUserDetailsAtAdoric(JSON.parse(xmlhttp.responseText), petriValue, pageName);
+        }, function(xmlhttp) {
+            xmlhttp = null;
+            return;
+        }, true);
+    }
+    function reportAdoricEventToBI(evtName, pageName) {
+        return function(data) {
+            var id = adoricLightBoxEvents[evtName];
+            var reasonKey = data.reason || 0;
+            if (biMap[id][reasonKey].evid === 666) {
+                return;
+            }
+            var params = "evid=" + biMap[id][reasonKey].evid + "&lb_id=" + data.lightbox.id + "&adoric_uuid=" + data.userId;
+            if (biMap[id][reasonKey].evid === 38) {
+                params += "&value=" + data.track + "&action=click&type=link";
+                if ([ "templatesPage", "templatesPagePT", "templatesViewer" ].indexOf(pageName) !== -1) {
+                    var templatesParams = "evid=15&lb_id=" + data.lightbox.id + "&adoric_uuid=" + data.userId;
+                    Adoric.biTrigger("adoric?src=2&" + templatesParams + "&_=" + new Date().getTime());
+                }
+            }
+            if (biMap[id][reasonKey].evid === 35 || biMap[id][reasonKey].evid === 40) {
+                params += "&is_visible=" + data.isVisible;
+            }
+            Adoric.biTrigger("adoric?src=2&" + params + "&_=" + new Date().getTime());
+        };
+    }
+    function ready(petriValue, params, pageName) {
+        var adoricInterface = window["adoric"];
+        adoricInterface.removeEvents({
+            all: true
+        });
+        isTemplateViewer(adoricInterface, window.location.href);
+        adoricInterface.trigger(this, "setConfig", {
+            isVisible: petriValue === "visible"
+        });
+        adoricManager(adoricInterface, params, petriValue, pageName);
+        if (adoricInterface) {
+            adoricInterface.on("version:selected", reportAdoricEventToBI("version:selected", pageName));
+            adoricInterface.on("lightbox:before:show", reportAdoricEventToBI("lightbox:before:show", pageName));
+            adoricInterface.on("lightbox:before:click", reportAdoricEventToBI("lightbox:before:click", pageName));
+            adoricInterface.on("lightbox:before:close", reportAdoricEventToBI("lightbox:before:close", pageName));
+        }
+    }
+    function init(callback) {
+        var url = window.location.href.indexOf("local") !== -1 || window.location.href.indexOf("wixpress") !== -1 ? "www.wix.com" : window.location.href;
+        var pageName = findPageNameFromUrl(url);
+        if (pageName) {
+            callback(pageName);
+        }
+    }
+    function preInit() {
+        if (getLocalStorageValue("automation") === "true" || getCookieValue("automation") === "true") {
+            return;
+        } else {
+            init(getPetriExperiments);
+        }
+    }
+    return {
+        init: preInit,
+        getPetriExperiments: getPetriExperiments,
+        loadAdoricScript: loadAdoricScript,
+        isTemplateViewer: isTemplateViewer,
+        reportAdoricEventToBI: reportAdoricEventToBI,
+        findPageNameFromUrl: findPageNameFromUrl,
+        biTrigger: biTrigger,
+        getAdoricLabelCounter: getAdoricLabelCounter,
+        adoricLabelCalledByPage: adoricLabelCalledByPage,
+        isUserRegistered: isUserRegistered,
+        initUserDetailsAtAdoric: initUserDetailsAtAdoric,
+        checkIfGUIDExistInDataCollection: checkIfGUIDExistInDataCollection,
+        cleanAdoricParams: cleanAdoricParams,
+        query: query,
+        mergeObjects: mergeObjects,
+        getLocaleFormat: getLocaleFormat,
+        userMeetsWithCampaingConditions: userMeetsWithCampaingConditions,
+        sortCampaignPriority: sortCampaignPriority,
+        getLocalStorageValue: getLocalStorageValue,
+        adoricManager: adoricManager,
+        checkIfPremiumAccountIsValid: checkIfPremiumAccountIsValid,
+        getCookieValue: getCookieValue,
+        getPageUrlToCheckIfMA: getPageUrlToCheckIfMA,
+        isUserMonthlyPremium: isUserMonthlyPremium,
+        isUserColor: isUserColor,
+        isNotValidMA: isNotValidMA
+    };
+}();
+
+Adoric.init();
